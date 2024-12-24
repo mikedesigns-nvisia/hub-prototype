@@ -1,0 +1,150 @@
+@use '@carbon/react/scss/themes';
+@use '@carbon/react/scss/theme' with (
+  $theme: themes.$g100
+);
+@use '@carbon/react/scss/grid';
+@use '@carbon/react/scss/components/data-table';
+@use '@carbon/react/scss/components/search';
+@use '@carbon/react/scss/components/dropdown';
+@use '@carbon/react/scss/components/tag';
+@use '@carbon/react/scss/components/structured-list';
+
+:root {
+  @include theme.theme();
+}
+
+.cds--data-table-container {
+  background-color: var(--cds-ui-background);
+  border-radius: 0.5rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+}
+
+.cds--data-table {
+  overflow: auto;
+  flex: 1;
+  border-top: none;
+}
+
+.cds--data-table-header {
+  user-select: none;
+  cursor: move;
+}
+
+// Custom scrollbar styling
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cds-ui-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--cds-ui-04);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cds-ui-05);
+}
+
+.cds--toolbar-content {
+  gap: 0.5rem;
+}
+
+.titlebar {
+  -webkit-app-region: drag;
+  height: 48px;
+  background: var(--cds-ui-background);
+  border-bottom: 1px solid var(--cds-ui-03);
+  user-select: none;
+  padding: 0 8px;
+}
+
+.titlebar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  gap: 8px;
+}
+
+.titlebar-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 120px;
+}
+
+.titlebar-center {
+  flex: 1;
+  max-width: 300px;
+  -webkit-app-region: no-drag;
+
+  .cds--search-input {
+    background: var(--cds-field-01);
+    border: none;
+    height: 32px;
+  }
+}
+
+.titlebar-icon {
+  width: 16px;
+  height: 16px;
+  color: var(--cds-text-02);
+  cursor: move;
+}
+
+.titlebar-text {
+  font-size: 12px;
+  color: var(--cds-text-01);
+  font-weight: 500;
+}
+
+.titlebar-controls {
+  -webkit-app-region: no-drag;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.titlebar-button {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: var(--cds-text-02);
+  transition: all 0.2s ease;
+  border-radius: 4px;
+  
+  &:hover {
+    background: var(--cds-hover-ui);
+    color: var(--cds-text-01);
+  }
+}
+
+.titlebar-close-icon {
+  width: 16px;
+  height: 16px;
+  
+  &:hover {
+    color: var(--cds-support-01);
+  }
+}
+
+// Search input specific styles
+.cds--search-input {
+  background: transparent;
+}
+
+.cds--search-magnifier {
+  height: 32px;
+}

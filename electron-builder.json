@@ -1,0 +1,22 @@
+{
+  "appId": "com.mortgage.widget",
+  "productName": "Mortgage Widget",
+  "directories": {
+    "output": "dist"
+  },
+  "files": [
+    "dist/**/*",
+    "package.json"
+  ],
+  "mac": {
+    "category": "public.app-category.finance",
+    "target": ["dmg"]
+  },
+  "win": {
+    "target": ["nsis"]
+  },
+  "linux": {
+    "target": ["AppImage"],
+    "category": "Finance"
+  }
+}
