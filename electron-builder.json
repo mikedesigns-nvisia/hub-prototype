@@ -1,6 +1,6 @@
 {
-  "appId": "com.mortgage.widget",
-  "productName": "Mortgage Widget",
+  "appId": "com.nvisia.hub-prototype",
+  "productName": "Hub Prototype",
   "directories": {
     "output": "dist"
   },

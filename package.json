@@ -1,6 +1,8 @@
 {
-  "name": "launcher-news",
+  "name": "hub-prototype",
   "version": "1.0.0",
+  "description": "Prototype 1: Electron-based widget system with loan pipeline and news widgets",
+  "productName": "Hub Prototype",
   "main": "dist/main/main.js",
   "scripts": {
     "dev": "vite",
@@ -14,8 +16,8 @@
     "package:linux": "npm run build && electron-builder --linux"
   },
   "build": {
-    "appId": "com.novussky.launchernews",
-    "productName": "Launcher News",
+    "appId": "com.nvisia.hub-prototype",
+    "productName": "Hub Prototype",
     "directories": {
       "output": "release"
     },
